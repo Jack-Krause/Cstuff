@@ -36,17 +36,19 @@ int main() {
 
     f = A[f]; // line 5 txt
     printf("f = A[f = 1]: %d\n", f);
-    printf("%d\n", A[8]);
 
     int x_11 = *x_9 + 8; // line 6
     printf("X11 = *X9 + 8: %d\n", x_11);
 
-//    *x_9 = A[x_11];
     x_9 = &A[x_11];
     printf("X9 points to A[X11 = 24]: %d\n", *x_9);
 
     *x_9 = *x_9 + f;
     printf("increment value pointed to by X9 by f = 2: %d\n", *x_9);
+
+    *x_10 = *x_9;
+    printf("store X9 in X10's pointer, which is B[16]: %d\n", *x_10);
+
 
     printf("\n");
 
